@@ -6,14 +6,20 @@ document.getElementById('noakhali-donation-button').addEventListener('click', fu
     const donationTitle = document.getElementById('noakhali-title').innerText;
     const accountBalance = getBalanceById('account-balance');
     const donationBalance = getBalanceById('noakhali-balance');
-    // console.log("Donation amount: ", donationAmount, accountBalance, donationBalance)
+    // console.log("Donation amount: ", donationAmount, accountBalance, donationBalance) Congrates! Successfully
 
     if(isNaN(donationAmount)){
-        console.log('Not number');
+        document.getElementById('modal-heading').innerText = 'Sorry';
+        document.getElementById('my_modal_1').showModal();
+        document.getElementById('modal-title').innerText = `You have to enter any valid digit`;
+        document.getElementById('confirmation').innerText = 'Donation Failed';
         return 
     }
     if(donationAmount > accountBalance){
-        console.log('Donation amount is grater than account balance');
+        document.getElementById('modal-heading').innerText = 'Sorry';
+        document.getElementById('my_modal_1').showModal();
+        document.getElementById('modal-title').innerText = `Donation amount is grater than account balance`;
+        document.getElementById('confirmation').innerText = 'Donation Failed';
         return
     }
     
@@ -26,6 +32,9 @@ document.getElementById('noakhali-donation-button').addEventListener('click', fu
 
     // show modal
     document.getElementById('my_modal_1').showModal();
+    document.getElementById('modal-heading').innerText = 'Congrates!';
+    document.getElementById('modal-title').innerText = `You Have Donated For ${donationTitle}`;
+    document.getElementById('confirmation').innerText = 'Successfully';
 })
 
 
@@ -40,11 +49,17 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
     // console.log("Donation amount: ", donationAmount, accountBalance, donationBalance)
 
     if(isNaN(donationAmount)){
-        console.log('Not number');
+        document.getElementById('modal-heading').innerText = 'Sorry';
+        document.getElementById('my_modal_1').showModal();
+        document.getElementById('modal-title').innerText = `You have to enter any valid digit`;
+        document.getElementById('confirmation').innerText = 'Donation Failed';
         return 
     }
     if(donationAmount > accountBalance){
-        console.log('Donation amount is grater than account balance');
+        document.getElementById('modal-heading').innerText = 'Sorry';
+        document.getElementById('my_modal_1').showModal();
+        document.getElementById('modal-title').innerText = `Donation amount is grater than account balance`;
+        document.getElementById('confirmation').innerText = 'Donation Failed';
         return
     }
     
@@ -54,10 +69,13 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
 
 
     // add history feni
-    addHistory('historyContainer', donationAmount, donationTitle);
+    addHistory('historyContainer', donationAmount, donationTitle); 
 
     // show modal
     document.getElementById('my_modal_1').showModal();
+    document.getElementById('modal-heading').innerText = 'Congrates!';
+    document.getElementById('modal-title').innerText = `You Have Donated For ${donationTitle}`;
+    document.getElementById('confirmation').innerText = 'Successfully';
 })
 
 
@@ -72,11 +90,17 @@ document.getElementById('protest-donation-button').addEventListener('click', fun
     // console.log("Donation amount: ", donationAmount, accountBalance, donationBalance)
 
     if(isNaN(donationAmount)){
-        console.log('Not number');
+        document.getElementById('modal-heading').innerText = 'Sorry';
+        document.getElementById('my_modal_1').showModal();
+        document.getElementById('modal-title').innerText = `You have to enter any valid digit`;
+        document.getElementById('confirmation').innerText = 'Donation Failed';
         return 
     }
     if(donationAmount > accountBalance){
-        console.log('Donation amount is grater than account balance');
+        document.getElementById('modal-heading').innerText = 'Sorry';
+        document.getElementById('my_modal_1').showModal();
+        document.getElementById('modal-title').innerText = `Donation amount is grater than account balance`;
+        document.getElementById('confirmation').innerText = 'Donation Failed';
         return
     }
     
@@ -90,4 +114,7 @@ document.getElementById('protest-donation-button').addEventListener('click', fun
 
     // show modal
     document.getElementById('my_modal_1').showModal();
+    document.getElementById('modal-heading').innerText = 'Congrates!';
+    document.getElementById('modal-title').innerText = `You Have Donated For ${donationTitle}`;
+    document.getElementById('confirmation').innerText = 'Successfully';
 })
