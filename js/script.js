@@ -22,10 +22,10 @@ document.getElementById('noakhali-donation-button').addEventListener('click', fu
         document.getElementById('confirmation').innerText = 'Donation Failed';
         return
     }
-    if(donationAmount < 0){
+    if(donationAmount <= 0){
         document.getElementById('modal-heading').innerText = 'Sorry';
         document.getElementById('my_modal_1').showModal();
-        document.getElementById('modal-title').innerText = `Donation amount is less than 0`;
+        document.getElementById('modal-title').innerText = `Donation must be greater then 0`;
         document.getElementById('confirmation').innerText = 'Donation Failed';
         return
     }
@@ -69,10 +69,10 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
         document.getElementById('confirmation').innerText = 'Donation Failed';
         return
     }
-    if(donationAmount < 0){
+    if(donationAmount <= 0){
         document.getElementById('modal-heading').innerText = 'Sorry';
         document.getElementById('my_modal_1').showModal();
-        document.getElementById('modal-title').innerText = `Donation amount is less than 0`;
+        document.getElementById('modal-title').innerText = `Donation must be greater then 0`;
         document.getElementById('confirmation').innerText = 'Donation Failed';
         return
     }
@@ -117,10 +117,10 @@ document.getElementById('protest-donation-button').addEventListener('click', fun
         document.getElementById('confirmation').innerText = 'Donation Failed';
         return
     }
-    if(donationAmount < 0){
+    if(donationAmount <= 0){
         document.getElementById('modal-heading').innerText = 'Sorry';
         document.getElementById('my_modal_1').showModal();
-        document.getElementById('modal-title').innerText = `Donation amount is less than 0`;
+        document.getElementById('modal-title').innerText = `Donation must be greater then 0`;
         document.getElementById('confirmation').innerText = 'Donation Failed';
         return
     }
