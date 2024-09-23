@@ -1,5 +1,5 @@
 document.getElementById('home-btn').addEventListener('click', function(event){
     event.preventDefault();
 
-    window.location = '/PHero-B10-A05/'
+    window.location = 'https://walidurtanjim.github.io/PHero-B10-A05/'
 })
